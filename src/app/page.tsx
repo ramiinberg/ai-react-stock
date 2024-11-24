@@ -38,7 +38,7 @@ export default function Home() {
               </button>
             </div>
           </form>
-          <p className="ticker-choice-display">
+          <p className="flex items-center h-[3em]">
             Your tickers: {tickers.join(", ")}
           </p>
           <button className="generate-report-btn" type="button" disabled={tickers.length === 0}>
