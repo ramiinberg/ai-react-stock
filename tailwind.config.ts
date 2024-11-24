@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customGray: "#f6f6f6",
+      },
+      fontFamily: {
+        comin: ["Comic Neue", "cursive"],
       },
     },
   },
