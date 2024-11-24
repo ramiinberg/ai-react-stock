@@ -18,8 +18,11 @@ export default function Home() {
 
   return (
     <div>
-      <main>
-        <section className="action-panel">
+      <header className="flex justify-center p-4 bg-black max-w-md mx-auto">
+        <h1>Stock Prediction App</h1>
+      </header>
+      <main className="flex justify-center">
+        <section className="flex flex-col justify-around items-center h-[350px] my-6">
           <form id="ticker-input-form" onSubmit={handleSubmit}>
             <label htmlFor="ticker-input"> Add up to 3 stock tickers below to get a super accurate stock predictions report👇 </label>
             <div className="form-input-control">
@@ -47,7 +50,7 @@ export default function Home() {
           <Image src="/images/loader.svg" alt="loading" width={50} height={50} />
           <div id="api-message">Querying Stocks API...</div>
         </section>
-        <section className="output-panel">
+        <section className="flex flex-col justify-around items-center h-[350px] my-6">
           <h2>Your Report 😜</h2>
         </section>
       </main>
