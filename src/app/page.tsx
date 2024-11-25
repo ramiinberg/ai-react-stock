@@ -23,8 +23,8 @@ export default function Home() {
       </header>
       <main className="flex justify-center">
         <section className="flex flex-col justify-around items-center h-[350px] my-6">
-          <form id="ticker-input-form" onSubmit={handleSubmit}>
-            <label htmlFor="ticker-input"> Add up to 3 stock tickers below to get a super accurate stock predictions report👇 </label>
+          <form className="w-[360px] flex flex-col items-center" id="ticker-input-form" onSubmit={handleSubmit}>
+            <label className="text-center p-[.43em] text-[15px] mb-4 w-4/5" htmlFor="ticker-input"> Add up to 3 stock tickers below to get a super accurate stock predictions report👇 </label>
             <div className="form-input-control">
               <input
                 type="text"
