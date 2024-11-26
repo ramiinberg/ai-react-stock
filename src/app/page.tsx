@@ -25,23 +25,24 @@ export default function Home() {
         <section className="flex flex-col justify-around items-center h-[350px] my-6">
           <form className="w-[360px] flex flex-col items-center" id="ticker-input-form" onSubmit={handleSubmit}>
             <label className="text-center p-[.43em] text-[15px] mb-4 w-4/5" htmlFor="ticker-input"> Add up to 3 stock tickers below to get a super accurate stock predictions report👇 </label>
-            <div className="form-input-control">
+            <div className="flex w-70">
               <input
+                className="p-[1em] border-2 border-black border-r-0"
                 type="text"
                 id="ticker-input"
                 placeholder="MSFT"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
-              <button type="submit" className="add-ticker-btn">
-                <Image src="/images/add.svg" className="add-ticker-svg" alt="add" width={20} height={20} />
+              <button type="submit" className="flex items-center bg-white text-[3em] p-0 px-[0.35em] cursor-pointer border-2 add-ticker-btn">
+                <Image src="/images/add.svg" className="w-[14px]" alt="add" width={20} height={20} />
               </button>
             </div>
           </form>
           <p className="flex items-center h-[3em]">
             Your tickers: {tickers.join(", ")}
           </p>
-          <button className="generate-report-btn" type="button" disabled={tickers.length === 0}>
+          <button className="w-[70%] py-4 px-6 cursor-pointer border-2 border-black bg-[#46ff90] uppercase font-medium tracking-wide text-[105%]" type="button" disabled={tickers.length === 0}>
             Generate Report
           </button>
           <p className="text-sm font-bold font-comic">Always correct 15% of the time!</p>
@@ -50,11 +51,11 @@ export default function Home() {
           <Image src="/images/loader.svg" alt="loading" width={50} height={50} />
           <div id="api-message">Querying Stocks API...</div>
         </section>
-        <section className="hidden flex-col justify-start border-2 p-4 px-8 items-center h-[350px] my-6">
+        <section className="output-panel hidden flex-col justify-start border-2 p-4 px-8 items-center h-[350px] my-6">
           <h2 className="items-center font-normal -mt-[26px] bg-customGray p-0 px-[10px]">Your Report 😜</h2>
         </section>
       </main>
-      <footer>
+      <footer className="text-[14px] text-center">
         &copy; This is not real financial advice!
       </footer>
     </div>

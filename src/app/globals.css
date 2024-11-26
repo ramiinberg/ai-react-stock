@@ -19,3 +19,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.output-panel p::-webkit-scrollbar {
+  display: none;
+}
+
+.output-panel p::-moz-scrollbar {
+  display: none;
+}
