@@ -4,13 +4,14 @@ import Image from "next/image";
 import { useState } from "react";
 import add from "./images/add.svg";
 import loader from "./images/loader.svg";
-import { DisabledButton } from "@/components/Buttons";
+import { Button, DisabledButton } from "@/components/Buttons";
 
 export default function Home() {
   const [tickers, setTickers] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    console.log("submitting form");
     event.preventDefault();
     if (tickers.length < 3 && inputValue) {
       setTickers([...tickers, inputValue]);
@@ -47,7 +48,7 @@ export default function Home() {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
-              <button
+              <Button
                 type="submit"
                 className="flex items-center bg-white text-[3em] p-0 px-[0.35em] cursor-pointer border-2 add-ticker-btn"
               >
@@ -58,7 +59,7 @@ export default function Home() {
                   width={20}
                   height={20}
                 />
-              </button>
+              </Button>
             </div>
           </form>
           <p className="flex items-center h-[3em]">
