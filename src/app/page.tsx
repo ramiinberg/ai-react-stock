@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import add from "./images/add.svg"
+import loader from "./images/loader.svg"
 
 
 export default function Home() {
@@ -35,7 +37,7 @@ export default function Home() {
                 onChange={(e) => setInputValue(e.target.value)}
               />
               <button type="submit" className="flex items-center bg-white text-[3em] p-0 px-[0.35em] cursor-pointer border-2 add-ticker-btn">
-                <Image src="/images/add.svg" className="w-[14px]" alt="add" width={20} height={20} />
+                <Image src={add} className="w-[14px]" alt="add" width={20} height={20} />
               </button>
             </div>
           </form>
@@ -48,7 +50,7 @@ export default function Home() {
           <p className="text-sm font-bold font-comic">Always correct 15% of the time!</p>
         </section>
         <section className="hidden flex-col justify-around h-[400px] text-center">
-          <Image src="/images/loader.svg" alt="loading" width={50} height={50} />
+          <Image src={loader} alt="loading" width={50} height={50} />
           <div id="api-message">Querying Stocks API...</div>
         </section>
         <section className="output-panel hidden flex-col justify-start border-2 p-4 px-8 items-center h-[350px] my-6">
