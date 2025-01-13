@@ -11,9 +11,10 @@ export default function Home() {
   const [inputValue, setInputValue] = useState<string>("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    console.log("submitting form");
+    console.log(`submitting form with value: ${inputValue}`);
     event.preventDefault();
     if (tickers.length < 3 && inputValue) {
+      console.log("adding ticker");
       setTickers([...tickers, inputValue]);
       setInputValue("");
     }
@@ -41,7 +42,7 @@ export default function Home() {
             </label>
             <div className="flex w-70">
               <input
-                className="p-[1em] border-2 border-black border-r-0"
+                className="p-[1em] border-2 border-black border-r-0 text-black"
                 type="text"
                 id="ticker-input"
                 placeholder="MSFT"
